@@ -8,7 +8,7 @@ const Logo: React.FC<LogoProps> = ({ size }) => (
    <h1
       className="logo"
       style={{
-         fontSize: size ?? '36px',
+         fontSize: size ?? '24px',
       }}>
       Bruno Zampieri
    </h1>

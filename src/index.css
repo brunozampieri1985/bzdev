@@ -6,6 +6,11 @@
   --theme-hi-contrast-color: #63B3ED;
   --theme-md-contrast-color:#3182CE;
   --theme-lo-contrast-color: #2C5282;
+
+  --theme-sm-breakpoint: 576px;
+  --theme-md-breakpoint: 768px;
+  --theme-lg-breakpoint: 992px;
+  --theme-xl-breakpoint: 1200px;
 }
 
 * {
