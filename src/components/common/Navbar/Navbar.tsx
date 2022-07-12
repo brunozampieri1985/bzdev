@@ -7,6 +7,8 @@ import Logo from '@components/common/Logo'
 const Navbar: React.FC = () => {
    const [isOpen, setIsOpen] = useState(false)
    const { lang, changeLang } = useLang()
+
+   
    return (
       <nav className="navbar">
          <div className="navbar-container">
@@ -23,11 +25,11 @@ const Navbar: React.FC = () => {
          </div>
        
             <ul className={`navbar-menu ${
-               isOpen ? 'navbar-menu-menu-active' : ''
+               isOpen ? 'navbar-menu-active' : ''
             }`}>
                {data.map((item, index) => (
                   <li className="navbar-menu-item" key={index}>
-                     <a className="navbar-menu-link" href={item.url}>{item.description[lang as LangType]}</a>
+                     <a className="navbar-menu-link" onClick={() => setIsOpen(false)} href={item.url}>{item.description[lang as LangType]}</a>
                   </li>
                ))}
             </ul>

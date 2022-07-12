@@ -11,9 +11,9 @@
    content: 'Bruno Zampieri';
    position: absolute;
    color: var(--theme-md-contrast-color);
-   transform: translateX(2px);
-   transform: translateY(2px);
-   text-shadow: 0px 0px 50px var(--theme-hi-contrast-color);
+   transform: translateX(1px);
+   transform: translateY(1px);
+   text-shadow: 0px 10px 50px var(--theme-hi-contrast-color);
    z-index: 1;
    animation: glowing 5s ease-in-out infinite;
 }
