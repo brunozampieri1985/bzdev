@@ -1,0 +1,42 @@
+.logo {
+   display: flex;
+   align-items: center;
+   padding: 0 100px;
+   font-family: Borgen;
+   color: var(--theme-lo-contrast-color);
+   position: relative;
+   z-index: 2;
+}
+
+.logo::before {
+   content: 'Bruno Zampieri';
+   position: absolute;
+   color: var(--theme-md-contrast-color);
+   transform: translateX(2px);
+   transform: translateY(2px);
+   text-shadow: 0px 0px 50px var(--theme-hi-contrast-color);
+   z-index: 1;
+   animation: glowing 5s ease-in-out infinite;
+}
+
+@keyframes glowing {
+   0% {
+      opacity: 0;
+   }
+   50% {
+      opacity: 1;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+
+.logo::after {
+   content: 'Bruno Zampieri';
+   position: absolute;
+   color: var(--theme-text-color);
+   transform: translateX(-1px);
+   transform: translateY(-1px);
+   text-shadow: 0px 0px 10px var(--theme-text-color);
+   z-index: 1;
+}

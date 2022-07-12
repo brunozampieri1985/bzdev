@@ -1,0 +1,86 @@
+:root {
+  --theme-bg-color: #1A202C;
+  --theme-bg-color-contrast: #2D3748;
+  --theme-bg-color-transparency:#2d3748ad;
+  --theme-text-color: #F8f8f8;
+  --theme-hi-contrast-color: #63B3ED;
+  --theme-md-contrast-color:#3182CE;
+  --theme-lo-contrast-color: #2C5282;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--theme-bg-color);
+  color: var(--theme-text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--theme-text-color);  
+}
+
+@font-face {
+  font-family: 'Borgen';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Borgen'), url('https://fonts.cdnfonts.com/s/76200/Borgen.woff') format('woff');
+}
+@font-face {
+  font-family: 'Borgen';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Borgen'), url('https://fonts.cdnfonts.com/s/76200/BorgenOblique.woff') format('woff');
+}
+@font-face {
+  font-family: 'Borgen';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Borgen'), url('https://fonts.cdnfonts.com/s/76200/BorgenBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Borgen';
+  font-style: italic;
+  font-weight: bold;
+  src: local('Borgen'), url('https://fonts.cdnfonts.com/s/76200/BorgenBoldOblique.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Montserrat'), url('https://fonts.cdnfonts.com/s/14883/Montserrat-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Montserrat'), url('https://fonts.cdnfonts.com/s/14883/Montserrat-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Montserrat'), url('https://fonts.cdnfonts.com/s/14883/Montserrat-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: bold;
+  src: local('Montserrat'), url('https://fonts.cdnfonts.com/s/14883/Montserrat-BoldItalic.woff') format('woff');
+}

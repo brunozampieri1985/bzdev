@@ -1,0 +1,7 @@
+.navbar {
+    position: fixed;
+    display: flex;
+    height: 90px;
+    width: 100%;
+    background-color: var(--theme-bg-color-transparency);
+}
