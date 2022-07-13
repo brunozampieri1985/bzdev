@@ -6,6 +6,7 @@
     max-height: 100vh;
     width: 100%;
     background-color: var(--theme-bg-color);
+    z-index: 999;
 }
 
 .navbar-desktop-container {

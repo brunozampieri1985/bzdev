@@ -1,50 +1,154 @@
 .skills-wrapper {
-    min-height: calc(100vh - 90px);
+   min-height: calc(100vh - 90px);
+   display: flex;
+   flex-direction: column;
+   background-color: var(--theme-bg-color);
+   align-items: center;
 }
-
 .skills-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    flex-wrap: wrap;
-    gap: 40px;
+   display: flex;
+   max-width: 1200px;
+   margin: 0 auto;
 }
 
-.skills-container .skills-card {
-    position: relative;
-    width: 220px;
-    height: 250px;
-    background-color: var(--theme-bg-color-contrast);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.skills-title {
+   width: 30%;
+   height: calc(100vh - 90px);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: Borgen;
+   font-size: 32px;
+}
+.skills-card-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   flex-wrap: wrap;
+   gap: 40px;
+   width: 70%;
 }
 
-.skills-container .skills-card .skills-percentage {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    transform: rotate(270deg);
-    
+.skills-card-container .skills-card {
+   position: relative;
+   width: 220px;
+   height: 250px;
+   background-color: var(--theme-bg-color-contrast);
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
-.skills-container .skills-card .skills-percentage svg {
-    position: relative;
-    width: 150px;
-    height: 150px;
+.skills-card-container .skills-card .skills-percentage {
+   position: relative;
+   width: 150px;
+   height: 150px;
 }
 
-.skills-container .skills-card .skills-percentage svg circle {
-    width: 100%;
-    height: 100%;
-    fill: transparent;
-    stroke-width: 4;
-    stroke: var(--theme-bg-color);
-    transform: translate(5px, 5px);
+.skills-card-container .skills-card .skills-percentage svg {
+   position: relative;
+   width: 150px;
+   height: 150px;
+   transform: rotate(270deg);
 }
 
-.skills-container .skills-card .skills-percentage svg circle:nth-child(2) {
-    stroke: var(--clr);
-    stroke-dasharray: 440;
+.skills-card-container .skills-card .skills-percentage svg circle {
+   width: 100%;
+   height: 100%;
+   fill: transparent;
+   stroke-width: 4;
+   stroke: var(--theme-bg-color);
+   transform: translate(5px, 5px);
+}
+
+@property --num {
+   syntax: '<number>';
+   initial-value: 0;
+   inherits: none;
+}
+
+@property --clr {
+   syntax: '<color>';
+}
+
+.skills-card-container .skills-card .skills-percentage svg circle:nth-child(2) {
+   stroke: var(--clr);
+   stroke-dasharray: 440;
+   stroke-dashoffset: var(--animationCircle);
+   animation: offset 2s linear forwards;
+}
+
+@propety --animation {
+   syntax: '<number>';
+   initial-value: 0;
+   inherits: none;
+}
+
+@keyframes offset {
+   0% {
+      stroke-dashoffset: 440;
+   }
+   100% {
+      stroke-dashoffset: var(--animationCircle);
+   }
+}
+
+.skills-dot {
+   position: absolute;
+   inset: 5px;
+   z-index: 3;
+   transform: rotate(calc(3.6deg * var(--num)));
+   /* 360deg / 10 = 3.6deg */
+   animation: animateDot 2s linear forwards;
+}
+
+@keyframes animateDot {
+   0% {
+      transform: rotate(calc(3.6deg * var(--num)) + 360deg);
+   }
+   100% {
+      transform: rotate(calc(3.6deg * var(--num)));
+   }
+}
+
+.skills-dot::before {
+   position: absolute;
+   content: '';
+   background-color: var(--clr);
+   box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+   width: 14px;
+   height: 14px;
+   border-radius: 50%;
+   top: -7px;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.skills-percentage-number {
+   position: absolute;
+   inset: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.skills-percentage-number h2 {
+   padding: 0;
+   margin: 0;
+   display: flex;
+   align-items: center;
+}
+
+.skills-percentage-number p {
+   padding: 0;
+   margin: 0;
+   font-size: 12px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+}
+
+.skills-percentage-number span {
+   font-size: 16px;
 }

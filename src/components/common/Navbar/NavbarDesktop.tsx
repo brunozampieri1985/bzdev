@@ -10,7 +10,7 @@ const NavbarDesktop: React.FC = () => {
    return (
       <nav className="navbar-desktop">
          <div className="navbar-desktop-container">
-            <Logo />
+            <Logo size='30px'/>
             <ul className="navbar-desktop-menu">
                {data.map((item, index) => {
                   let Icon = item.icon
