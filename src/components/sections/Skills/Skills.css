@@ -1,0 +1,50 @@
+.skills-wrapper {
+    min-height: calc(100vh - 90px);
+}
+
+.skills-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.skills-container .skills-card {
+    position: relative;
+    width: 220px;
+    height: 250px;
+    background-color: var(--theme-bg-color-contrast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-container .skills-card .skills-percentage {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+    
+}
+
+.skills-container .skills-card .skills-percentage svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.skills-container .skills-card .skills-percentage svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 4;
+    stroke: var(--theme-bg-color);
+    transform: translate(5px, 5px);
+}
+
+.skills-container .skills-card .skills-percentage svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+}

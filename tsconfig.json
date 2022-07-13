@@ -19,6 +19,7 @@
       "paths": {
          "@components/*": ["src/components/*"],
          "@context/*": ["src/context/*"],
+         "@hooks/*": ["src/hooks/*"]
       }
    },
    "include": ["src"],
