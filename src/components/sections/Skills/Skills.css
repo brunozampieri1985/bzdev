@@ -2,11 +2,12 @@
    min-height: calc(100vh - 90px);
    display: flex;
    flex-direction: column;
-   background-color: var(--theme-bg-color);
+   background: linear-gradient(90deg, var(--theme-lo-contrast-color) 0%, var(--theme-bg-color-contrast) 50%, var(--theme-bg-color-contrast) 100%);
    align-items: center;
 }
 .skills-container {
    display: flex;
+   justify-content: center;
    max-width: 1200px;
    margin: 0 auto;
 }
@@ -17,27 +18,46 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   font-family: Borgen;
-   font-size: 32px;
+
 }
+
+.skills-list {
+   width: 70%;
+   height: calc(100vh - 90px);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+}
+
+
 .skills-card-container {
    display: flex;
    align-items: center;
    justify-content: center;
    position: relative;
    flex-wrap: wrap;
-   gap: 40px;
-   width: 70%;
+   width: 100%;
+   gap: 20px;
+   height: fit-content;
+   padding: 20px;
 }
 
 .skills-card-container .skills-card {
    position: relative;
    width: 220px;
    height: 250px;
-   background-color: var(--theme-bg-color-contrast);
+   background-color: var(--theme-bg-color);
    display: flex;
    align-items: center;
    justify-content: center;
+   box-shadow:
+   -10px -10px 30px black,
+   10px 10px 30px var(--theme-bg-color),
+   inset -10px -10px 10px #aeaec025,
+   inset 10px 10px 10px var(--theme-bg-color-contrast);
+   
 }
 
 .skills-card-container .skills-card .skills-percentage {
@@ -51,6 +71,7 @@
    width: 150px;
    height: 150px;
    transform: rotate(270deg);
+   
 }
 
 .skills-card-container .skills-card .skills-percentage svg circle {
@@ -58,8 +79,9 @@
    height: 100%;
    fill: transparent;
    stroke-width: 4;
-   stroke: var(--theme-bg-color);
+   stroke: var(--theme-bg-color-contrast);
    transform: translate(5px, 5px);
+   
 }
 
 @property --num {
@@ -132,6 +154,19 @@
    flex-direction: column;
    align-items: center;
    justify-content: center;
+   animation: animateOpacity 2s linear forwards;
+}
+
+@keyframes animateOpacity {
+   0% {
+      opacity: 0;
+   }
+   50% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
 }
 
 .skills-percentage-number h2 {
@@ -151,4 +186,37 @@
 
 .skills-percentage-number span {
    font-size: 16px;
+}
+
+
+@media (max-width: 768px) {
+   .skills-wrapper {
+   background: linear-gradient(0deg, var(--theme-lo-contrast-color) 0%,  var(--theme-bg-color-contrast) 100%);
+      
+   }
+   .skills-container {
+      flex-direction: column;
+   }
+   .skills-title {
+      height: unset;
+      width: 100%;
+   }
+
+   .skills-list {
+      height: unset;
+      width: 100%;
+   }
+
+   .skills-card-container {
+      width: 100%;
+      margin-top: 20px;
+      padding: 0;
+   }
+   .skills-card-container .skills-card {
+      width: 160px;
+      height: 180px;
+      background-color: transparent;
+      box-shadow: none;
+   }
+   
 }

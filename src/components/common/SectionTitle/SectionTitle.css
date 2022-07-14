@@ -1,0 +1,36 @@
+.section-title {   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Borgen;
+    font-size: 32px;
+    text-transform: uppercase;
+    position: relative;    
+    text-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5),
+    inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+    inset -4px -4px 10px rgba(67, 67, 67, 0.3),
+    4px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+ }
+
+
+  
+
+
+ .section-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: var(--theme-hi-contrast-color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--theme-hi-contrast-color);
+    z-index: 1;
+    box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5),
+        inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+        inset -4px -4px 10px rgba(67, 67, 67, 0.3),
+        4px 4px 10px rgba(0, 0, 0, 0.3);
+ }
+

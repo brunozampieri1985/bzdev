@@ -1,0 +1,46 @@
+.button {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: Borgen;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border: 0;
+    margin: 6px;
+    cursor: pointer;
+   
+}
+
+.button-primary {
+    background-color: var(--theme-bg-color-contrast);
+    color: var(--theme-text-color);
+    box-shadow:
+    -10px -10px 30px #151515,
+    10px 10px 30px var(--theme-bg-color),
+    inset -10px -10px 10px #aeaec025,
+    inset 10px 10px 10px var(--theme-bg-color-contrast);
+}
+
+.button-primary:hover {
+    background-color: var(--theme-bg-color);
+    color: var(--theme-text-color-contrast);
+    box-shadow:
+    -10px -10px 30px #151515,
+    10px 10px 30px var(--theme-bg-color-contrast),
+    inset -10px -10px 10px #aeaec025,
+    inset 10px 10px 10px var(--theme-bg-color);
+}
+.button-primary:active {
+    background-color: var(--theme-bg-color-contrast);
+    color: var(--theme-text-color);
+    box-shadow:   
+    -10px -10px 30px #151515,
+    10px 10px 30px var(--theme-bg-color-contrast),
+    inset -5px -5px 10px #151515,
+    inset 10px 10px 10px var(--theme-bg-color-contrast);
+}
+
+
