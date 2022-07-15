@@ -1,6 +1,5 @@
 import './ChangeLanguage.css'
 import { useLang } from '@context/LangContext'
-import BrFlag from '/br.svg'
 import { useEffect, useRef } from 'react'
 
 const ChangeLanguage: React.FC = () => {
@@ -25,8 +24,8 @@ const ChangeLanguage: React.FC = () => {
 
    return (
       <div className="change-language-wrapper">
-         <div className="change-language-pt">
-            <img src={'br.svg'} alt="Brazilian flag" width={30} />
+         <div className="change-language-img">
+            <img src={'https://hatscripts.github.io/circle-flags/flags/br.svg'} alt="Brazilian flag" width={20} />
          </div>
          <input
             type="checkbox"
@@ -35,7 +34,7 @@ const ChangeLanguage: React.FC = () => {
             onChange={(e) => handleChange(e)}
             ref={checkRef}
          />
-         <div className="change-language-pt">
+         <div className="change-language-img">
             <img src={'us.svg'} alt="USA flag" />
          </div>
       </div>

@@ -1,0 +1,112 @@
+.home-wrapper {
+   min-height: calc(100vh - 90px);
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   margin-top: 90px;
+}
+
+.home-profile-img {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 250px;
+   height: 250px;
+   border-radius: 50%;
+   overflow: hidden;
+   box-shadow: 0 0 0 7px #353535, 0 0 0 8px #3e3e3e,
+      inset 0 0 0 1px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.home-profile-img::after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: var(--theme-bg-color-contrast);
+   opacity: 0.5;
+   transition: 0.2s ease-in-out;
+   cursor: pointer;
+}
+
+.home-profile-img:hover::after {
+   opacity: 0;
+}
+
+.home-greetings {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   padding: 0;
+   margin: 0;
+   animation: translate-in-center 0.5s ease-in-out;
+}
+
+.home-greetings h1 {
+   font-family: Borgen;
+   font-weight: bold;
+   margin: 25px 0;
+   padding: 0;
+   color: var(--theme-hi-contrast-color);
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   text-shadow: 0 0 30px var(--theme-hi-contrast-color);
+}
+
+@keyframes translate-in-center {
+   0% {
+      transform: translateX(-100vw);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+.home-message {
+   font-family: Montserrat;
+   font-weight: 400;
+   margin: 0;
+   padding: 20px;
+   opacity: 0;
+   color: var(--theme-text-color);
+   text-align: center;
+   text-shadow: 0 0 30px var(--theme-text-color);
+   animation: opacity-in-center 0.5s linear forwards;
+   animation-delay: 0.5s;
+}
+
+@keyframes opacity-in-center {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+.home-social {
+   display: flex;
+   padding: 25px;
+   justify-content: center;
+   align-items: center;
+}
+
+
+@media (max-width: 768px) {
+   .home-profile-img {
+      width: 200px;
+      height: 200px;
+   }
+   .home-message {
+      font-size: 16px;
+      padding: 15px;
+
+   }
+}

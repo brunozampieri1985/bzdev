@@ -1,0 +1,15 @@
+.matrix {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.matrixOverlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: linear-gradient(180deg, #3182ce83 0%, rgb(0,0,0) 100%);
+    overflow: hidden;
+}

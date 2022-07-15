@@ -16,13 +16,13 @@
     border-radius: 10px;
     box-shadow: 0 0 0 2px #353535, 0 0 0 3px #3e3e3e,
     inset 0 0 0 1px rgba(0,0,0,1), 0 5px 20px rgba(0,0,0,0.5);    
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
     cursor: pointer;
 }
 
 .change-language-wrapper input[type=checkbox]:checked {
     background: linear-gradient(0deg, #e70c55, #a80c40);
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 
@@ -33,11 +33,11 @@
     height: 20px;
     top: 0;
     left: 0;
-    background: linear-gradient(0deg, rgb(0, 0, 0), #6b6b6b);
+    background: linear-gradient(0deg, rgb(0, 0, 0), var(--theme-lo-contrast-color));
     border-radius: 10px;
     box-shadow: 0 0 0 1px #000;
     transform: scale(.98, .96);
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 .change-language-wrapper input[type=checkbox]:checked::before {
@@ -53,22 +53,24 @@
     left: 10px;
     background: #1fe70c;
     border-radius: 10px;
-    box-shadow: 0 0 10px #1fe70c;
+    box-shadow: 0 0 10px #1fe70c, 0 0 30px #1fe70c;
     transform: scale(.98, .96);
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 .change-language-wrapper input[type=checkbox]:checked::after {
     left: 50px;
     background: #e70c55;
-    box-shadow: 0 0 10px #e70c55;
-    transition: all .5s ease-in-out;
+    box-shadow: 0 0 10px #e70c55, 0 0 30px #e70c55;
+    transition: all .2s ease-in-out;
 }
 
-.change-language-pt {
+.change-language-img {
     display: flex;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
 }
