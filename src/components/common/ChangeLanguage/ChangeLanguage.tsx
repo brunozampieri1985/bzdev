@@ -35,7 +35,7 @@ const ChangeLanguage: React.FC = () => {
             ref={checkRef}
          />
          <div className="change-language-img">
-            <img src={'us.svg'} alt="USA flag" />
+            <img src={'https://hatscripts.github.io/circle-flags/flags/us.svg'} alt="USA flag" width={20} />
          </div>
       </div>
    )
