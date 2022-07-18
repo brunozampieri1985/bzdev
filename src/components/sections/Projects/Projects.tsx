@@ -5,7 +5,11 @@ import './Projects.css'
 
 const Projects:React.FC = () => (
     <Section label='Projects'>
-        Projects
+        <div className="projects-wrapper">
+            <div className="projects-list">
+                
+            </div>
+        </div>
     </Section>
 )
 

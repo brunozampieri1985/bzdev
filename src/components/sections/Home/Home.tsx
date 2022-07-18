@@ -15,10 +15,7 @@ const Home: React.FC = () => {
             <div className="home-profile-info">
                <div className="home-profile-img">
                   <img src="profile.webp" alt="Profile Picture" />
-               </div>
-               <div className="home-profile-text">
-                  <p>{data.profile[lang as LangType]}</p>
-               </div>
+               </div>              
             </div>
             <div className="home-greetings">
                <h1>{data.greetings[lang as LangType]}</h1>
