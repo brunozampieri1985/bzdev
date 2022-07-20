@@ -2,7 +2,12 @@
    min-height: calc(100vh - 90px);
    display: flex;
    flex-direction: column;
-   background: linear-gradient(90deg, var(--theme-lo-contrast-color) 0%, var(--theme-bg-color-contrast) 50%, var(--theme-bg-color-contrast) 100%);
+   background: linear-gradient(
+      90deg,
+      var(--theme-lo-contrast-color) 0%,
+      var(--theme-bg-color-contrast) 50%,
+      var(--theme-bg-color-contrast) 100%
+   );
    align-items: center;
 }
 .skills-container {
@@ -18,7 +23,6 @@
    display: flex;
    align-items: center;
    justify-content: center;
-
 }
 
 .skills-list {
@@ -28,9 +32,7 @@
    flex-direction: column;
    align-items: center;
    justify-content: center;
-
 }
-
 
 .skills-card-container {
    display: flex;
@@ -52,12 +54,9 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   box-shadow:
-   -10px -10px 30px black,
-   10px 10px 30px var(--theme-bg-color),
-   inset -10px -10px 10px #aeaec025,
-   inset 10px 10px 10px var(--theme-bg-color-contrast);
-   
+   box-shadow: -10px -10px 30px black, 10px 10px 30px var(--theme-bg-color),
+      inset -10px -10px 10px #aeaec025,
+      inset 10px 10px 10px var(--theme-bg-color-contrast);
 }
 
 .skills-card-container .skills-card .skills-percentage {
@@ -71,7 +70,6 @@
    width: 150px;
    height: 150px;
    transform: rotate(270deg);
-   
 }
 
 .skills-card-container .skills-card .skills-percentage svg circle {
@@ -81,7 +79,6 @@
    stroke-width: 4;
    stroke: var(--theme-bg-color-contrast);
    transform: translate(5px, 5px);
-   
 }
 
 @property --num {
@@ -188,11 +185,13 @@
    font-size: 16px;
 }
 
-
 @media (max-width: 768px) {
    .skills-wrapper {
-   background: linear-gradient(0deg, var(--theme-lo-contrast-color) 0%,  var(--theme-bg-color-contrast) 100%);
-      
+      background: linear-gradient(
+         0deg,
+         var(--theme-lo-contrast-color) 0%,
+         var(--theme-bg-color-contrast) 100%
+      );
    }
    .skills-container {
       flex-direction: column;
@@ -218,5 +217,11 @@
       background-color: transparent;
       box-shadow: none;
    }
-   
+}
+
+@media (max-width: 1250px) {
+   .skills-card-container .skills-card {
+      width: 160px;
+      height: 180px;
+   }
 }
