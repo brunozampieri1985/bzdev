@@ -12,11 +12,11 @@ const Home: React.FC = () => {
       <Section label="Home">
          <MatrixBackground />
          <div className="home-wrapper">
-            <div className="home-profile-info">
+            
                <div className="home-profile-img">
                   <img src="profile.webp" alt="Profile Picture" />
                </div>              
-            </div>
+            
             <div className="home-greetings">
                <h1>{data.greetings[lang as LangType]}</h1>
             </div>

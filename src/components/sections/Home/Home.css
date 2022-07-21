@@ -38,15 +38,6 @@
    opacity: 0;
 }
 
-.home-profile-info {
-   display: flex;
-   align-items: center;
-   justify-content: center;   
-   cursor: pointer;
-   position: relative;
-   transition: .5s;
-}
-
 
 .home-greetings {
    display: flex;
@@ -91,12 +82,15 @@
 
 @media (max-width: 768px) {
    .home-profile-img {
-      width: 200px;
-      height: 200px;
+      width: 175px;
+      height: 175px;
    }
    .home-message {
-      font-size: 16px;
+      font-size: 14px;
       padding: 15px;
+   }
 
+   .home-social {
+      padding: 5px;
    }
 }

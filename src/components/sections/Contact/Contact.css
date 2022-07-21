@@ -10,7 +10,7 @@
 
 .contact-container {
     display: flex;
-    height: calc(100vh - 90px);
+    min-height: calc(100vh - 90px);
     width: 100%;
     align-items: center;
     max-width: 1200px;    
@@ -35,4 +35,27 @@
     background-color: var(--theme-bg-color);
     box-shadow: -10px -10px 30px black, 10px 10px 30px var(--theme-bg-color),
     inset 10px 10px 10px var(--theme-bg-color-contrast);
+}
+
+@media (max-width: 768px) {
+
+    .contact-wrapper {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-title {
+        height: fit-content;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contact-form {
+        height: fit-content;
+        width: 90%;
+        padding: 15px;
+    }    
 }
